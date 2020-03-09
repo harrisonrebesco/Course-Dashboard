@@ -1,0 +1,299 @@
+body {
+  color:#0F171F;
+  margin: 0px;
+  font-family: 'Arial';
+}
+
+h1 {
+  font-family: 'Arial Black';
+}
+h3{
+  font-family: 'Arial Black';
+}
+
+img {
+  max-height: 300px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  display:block;
+}
+
+/********   DASHBOARD COMPONENT STYLING   ********/
+
+/* Colour, shape and position of the search bar: */
+.searchContainer{
+  position: absolute;
+  top: 170px;
+  left: 5%;
+}
+.searchBar{
+  color: #B8C0C7;
+  background-color: #F0F1F3;
+  width: 400px;
+  height: 35px;
+  padding-left: 60px;;
+  border: none;
+  border-radius: 18px;
+  font-size: medium;
+  font-family: 'Arial';
+}
+::placeholder{
+  color: #B8C0C7;
+}
+.searchText{
+  padding-left: 20px;
+  display: inline-block;
+}
+
+/*Colour, shape and position of the sort button: */
+.sortContainer {
+  position: absolute;
+  top: 180px;
+  right: 6%;
+}
+.sortContainer label{
+  color: #B8C0C7;
+  padding-right: 10px;
+  font-weight: bolder;
+  font-size: small;
+}
+.sortContainer select{
+  color: white;
+  background-color: #446CFC;
+  width: 175px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 5px;
+  font-size: small;
+  font-weight: bold;
+  font-family: 'Arial';
+  -webkit-appearance: none;
+}
+.sortContainer option{
+  color: #ffffff;
+  font-size: small;
+  font-family: 'Arial';
+}
+
+/* Custom arrow icon for sort button: */
+.sortArrow{
+  position: absolute;
+  top:10px;
+  left:200px;
+  border: solid #0D34C0;
+  border-width: 0 2px 2px 0;
+  padding: 4px;
+  display: inline-block;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Custom sort icon for sort text: */
+.sortBars{
+  position: absolute;
+  top: 10px;
+  left:-30px;
+  width: 20px;
+  border-radius: 0px 0px;
+}
+.sortBarTop{
+  background-color: #B8C0C7;
+  width: 20px;
+  height: 2px;
+  margin-bottom: 3px;
+}
+.sortBarMiddle{
+  background-color: #B8C0C7;
+  width: 15px;
+  height: 2px;
+  margin-bottom: 3px;
+}
+.sortBarBottom{
+  background-color: #B8C0C7;
+  width: 10px;
+  height: 2px;
+}
+
+/* Grid and spacing for course cards to populate */
+.courses {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 5%;
+  padding-top: 9%;
+  padding-left: 5%;
+  padding-right: 5%
+}
+
+/********   DASHBOARD-HEADER COMPONENT STYLING   ********/
+
+/* Padding and color */
+.header {
+  box-shadow: 0px 5px 10px #F0F1F3;
+  padding-left: 5%;
+}
+
+/* Colour, position and interaction styling */
+.tab {
+  overflow: hidden;
+}
+.tab button  {
+  color: #B8C0C7;
+  background-color: inherit;
+  width: 175px;
+  float: left;
+  padding: 14px 16px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 15px;
+  font-family: 'Arial Black';
+  font-weight: 900;
+}
+.tab button:hover {
+  background-color: #F0F1F3;
+}
+.tab button.activeTab {
+  color: #0F171F;
+  box-shadow: inset 0px -5px #446CFC;
+}
+.tab button.activeTab > span{
+  background: #446CFC;
+}
+.tab button > span {
+  color: white;
+  background: #B8C0C7;
+  width: 25px;
+  height: 25px;
+  padding: 4px 5px;
+  border-radius: 4px;
+  float: right;
+  box-sizing: border-box;
+  font-size: smaller;
+}
+
+/********   CARD-CONTENTS COMPONENT STYLING   ********/
+
+/* Colour, padding and interaction styling */
+.courseCard {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  width: 500px;
+  height: 700px;
+  padding: 0px 0px;
+  border-radius: 15px;
+  text-align: left;
+}
+.courseCard:hover{
+  position: relative;
+  top: -25px;
+}
+.courseCard:hover .hiddenButton{
+  visibility: visible;
+}
+
+/* Position styling */
+.cardDetailsContainer {
+  height: 300px;
+  padding: 15px 45px;
+  font-size: large;
+}
+
+
+/* Styling for course progress bar */
+.progressBar{
+  background-color: #F0F1F3;
+  min-height: 10px;
+}
+.progressBar div{
+  background-color: #00E6C0;
+  min-height: 10px;
+}
+
+/* Styling for progress details */
+.completeModule{
+  color: #00E6C0;
+  font-size: large;
+  font-weight: bold;
+}
+.incompleteModule{
+  color: #B8C0C7;
+  font-size: large;
+  font-weight: bold;
+}
+
+/********   CARD-BUTTON COMPONENT STYLING   ********/
+
+/* Colour, position, shape styling */
+.genericButton {
+  color: white;
+  background-color: #446CFC;
+  position: relative;
+  bottom: 25px;
+  left: 52%;
+  width: 35%;
+  border: none;
+  padding: 15px 32px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: 'Arial';
+}
+.genericButton:active {
+  background-color: #0D34C0;
+}
+
+/* Will only show when hovered over */
+.hiddenButton {
+  color: #B8C0C7;
+  background-color: white;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+  position: relative;
+  bottom: 25px;
+  right: 22%;
+  width: 35%;
+  padding: 15px 32px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 16px;
+  font-family: 'Arial';
+  visibility: hidden;
+}
+
+/********** DUE DATE STYLING ********/
+
+.reminderContainer{
+  color: white;
+  background-color: #0F171F;
+  opacity: 0.7;
+  position: absolute;
+  width: 160px;
+  height: 50px;
+  margin-top: 15px;
+  margin-left: 325px;
+  border-radius: 8px;
+  align-items: center;
+}
+.reminderText{
+  padding-left: 8px;
+  display: inline-block;
+}
+
+
+/*********** ICON STYLING ********/
+.fa-search{
+  color: #B8C0C7;
+  position: absolute;
+  top: 20px;
+  left:15px;
+  display: inline-block;
+}
+
+.fa-calendar-day{
+  padding-left: 15px;
+}
